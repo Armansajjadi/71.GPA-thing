@@ -8,8 +8,6 @@ let calculateButton = $.getElementById("calculateButton")
 
 let dataObj = null
 
-let idOfTr = 1
-
 let Datas = []
 
 let span=$.getElementById("xButton");
@@ -18,18 +16,26 @@ let moral=$.getElementById("moral");
 
 let container=$.getElementById("container");
 
-console.log(moral,span,container);
+let removeButton=$.getElementById("removeButton")
 
 addButton.addEventListener("click", () => {
-    tableBody.insertAdjacentHTML("beforeend", ` <tr id="${++idOfTr}" class="trr border-b border-gray-300">
+    tableBody.insertAdjacentHTML("beforeend", `<tr class="trr border-b border-gray-300">
                             <td class="p-[10px] md:p-5"><input
-                                    class="w-full text-sm md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"
+                                    class="w-full text-xs md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"
                                     type="text" name="" id="" required></td>
                             <td class="p-[10px] md:p-5"><input
-                                class="w-full text-sm md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"                                    type="number" min="1" max="4" name="" id="" required></td>
+                                    class="w-full text-xs md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"
+                                    type="number" min="1" max="4" name="" id="" required></td>
                             <td class="p-[10px] md:p-5"><input
-                                class="w-full text-sm md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"                                    type="number" min="0" max="20" name="" id="" required></td>
+                                    class="w-full text-xs md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"
+                                    type="number" min="0" max="20" name="" id="" required></td>
                         </tr>`)
+})
+
+removeButton.addEventListener("click",() => {
+    if(tableBody.children.length > 1){
+        tableBody.removeChild(tableBody.lastChild);
+    }
 })
 
 

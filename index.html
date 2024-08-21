@@ -36,37 +36,47 @@
                 transform: scale(1);
             }
         }
+
         /* Custom Scrollbar for Webkit Browsers */
-::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-}
+        ::-webkit-scrollbar {
+            width: 12px;
+            /* Width of the scrollbar */
+        }
 
-::-webkit-scrollbar-track {
-    background: #f1f1f1; /* Background of the track */
-    border-radius: 10px; /* Rounded corners of the track */
-}
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            /* Background of the track */
+            border-radius: 10px;
+            /* Rounded corners of the track */
+        }
 
-::-webkit-scrollbar-thumb {
-    background-color: #888; /* Color of the scrollbar thumb */
-    border-radius: 10px; /* Rounded corners of the scrollbar thumb */
-    border: 3px solid #f1f1f1; /* Padding around the thumb */
-}
+        ::-webkit-scrollbar-thumb {
+            background-color: #888;
+            /* Color of the scrollbar thumb */
+            border-radius: 10px;
+            /* Rounded corners of the scrollbar thumb */
+            border: 3px solid #f1f1f1;
+            /* Padding around the thumb */
+        }
 
-::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Color on hover */
-}
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+            /* Color on hover */
+        }
 
-/* Custom Scrollbar for Firefox */
-* {
-    scrollbar-width: thin; /* Width of the scrollbar */
-    scrollbar-color: #888 #f1f1f1; /* Thumb color and track color */
-}
+        /* Custom Scrollbar for Firefox */
+        * {
+            scrollbar-width: thin;
+            /* Width of the scrollbar */
+            scrollbar-color: #888 #f1f1f1;
+            /* Thumb color and track color */
+        }
 
-/* Hover effect for Firefox */
-*::-webkit-scrollbar-thumb:hover {
-    background-color: #555; /* Color on hover */
-}
-
+        /* Hover effect for Firefox */
+        *::-webkit-scrollbar-thumb:hover {
+            background-color: #555;
+            /* Color on hover */
+        }
     </style>
     <title>GPA Calculator</title>
 </head>
@@ -83,33 +93,41 @@
                 <table class="w-full border-collapse ">
                     <thead class="border-b border-gray-300">
                         <tr>
-                            <th class="text-sm md:text-lg font-semibold px-2 py-2 md:px-6 md:py-4 text-center">Course Name</th>
-                            <th class="text-sm md:text-lg font-semibold px-2 py-2 md:px-6 md:py-4 text-center">Credits</th>
-                            <th class="text-sm md:text-lg font-semibold px-2 py-2 md:px-6 md:py-4 text-center">Grade</th>
+                            <th class="text-sm md:text-lg font-semibold px-2 py-2 md:px-6 md:py-4 text-center">Course
+                                Name</th>
+                            <th class="text-sm md:text-lg font-semibold px-2 py-2 md:px-6 md:py-4 text-center">Credits
+                            </th>
+                            <th class="text-sm md:text-lg font-semibold px-2 py-2 md:px-6 md:py-4 text-center">Grade
+                            </th>
                         </tr>
                     </thead>
                     <tbody id="tableBody">
                         <tr id="1" class="trr border-b border-gray-300">
                             <td class="p-[10px] md:p-5"><input
-                                    class="w-full text-sm md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"
+                                    class="w-full text-xs md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"
                                     type="text" name="" id="" required></td>
                             <td class="p-[10px] md:p-5"><input
-                                class="w-full text-sm md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"                                    type="number" min="1" max="4" name="" id="" required></td>
+                                    class="w-full text-xs md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"
+                                    type="number" min="1" max="4" name="" id="" required></td>
                             <td class="p-[10px] md:p-5"><input
-                                class="w-full text-sm md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"                                    type="number" min="0" max="20" name="" id="" required></td>
+                                    class="w-full text-xs md:text-base p-[6px] md:p-3 border border-gray-300 rounded md:rounded-lg shadow-sm focus:outline-none focus:border-blue-200 focus:ring-2 focus:ring-blue-100 focus:ring-opacity-50"
+                                    type="number" min="0" max="20" name="" id="" required></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
             <button id="addButton"
-                class="border p-[7px] md:p-3 text-lime-700 rounded-lg bg-slate-50 transition-all duration-300 text-base md:text-lg font-bold border-gray-300 hover:bg-gray-100 hover:shadow hover:text-red-700">Add
-                Course <i class="fa-light fa-plus"></i></button>
+                class="border p-[7px] md:p-3 text-lime-700 rounded-lg bg-slate-50 transition-all duration-300 text-sm md:text-lg font-bold border-gray-300 hover:bg-gray-100 hover:shadow hover:text-lime-600 active:scale-95">Add
+                Course <i class="fa-solid fa-plus text-sm"></i></button>
+            <button id="removeButton"
+                class="border p-[7px] mt-3 md:mt-4 md:p-3 text-red-700 rounded-lg bg-slate-50 transition-all duration-300 text-sm md:text-lg font-bold border-gray-300 hover:bg-gray-100 hover:shadow hover:text-red-600 active:scale-95">Remove
+                Course <i class="fa-solid fa-minus text-sm"></i></button>
         </div>
         <button id="calculateButton"
-            class="border p-[10px] md:p-4 mt-3 text-gray-800 shadow-lg rounded-xl bg-slate-50 transition-all duration-300 text-lg md:text-xl font-extrabold border-gray-300 hover:bg-gray-200 hover:shadow">Calculate</button>
+            class="border p-[10px] md:p-4 mt-3 text-gray-800 shadow-lg rounded-xl bg-slate-50 transition-all duration-300 text-base md:text-xl font-extrabold border-gray-300 hover:bg-gray-200 hover:shadow active:scale-95">Calculate</button>
     </div>
     <div>
-        
+
     </div>
     <div id="moral" class="absolute bg-white w-11/12 md:w-3/4 p-4 md:p-8 top-10 rounded-xl shadow-lg hidden">
         <div class="w-full flex flex-col justify-center bg-white">
@@ -120,12 +138,14 @@
                     <thead class="border-b border-gray-300">
                         <tr>
                             <th class="text-sm md:text-md font-extrabold px-2 py-2 md:px-6 md:py-4 text-center">Id</th>
-                            <th class="text-sm md:text-md font-extrabold px-2 py-2 md:px-6 md:py-4 text-center">Course Name</th>
+                            <th class="text-sm md:text-md font-extrabold px-2 py-2 md:px-6 md:py-4 text-center">Course
+                                Name</th>
                             <th class="text-sm md:text-md font-extrabold px-2 py-2 md:px-6 md:py-4 text-center">GPA</th>
-                            <th class="text-sm md:text-md font-extrabold px-2 py-2 md:px-6 md:py-4 text-center">Credits</th>      
+                            <th class="text-sm md:text-md font-extrabold px-2 py-2 md:px-6 md:py-4 text-center">Credits
+                            </th>
                         </tr>
                     </thead>
-                    <tbody id="tbodyMoral">    
+                    <tbody id="tbodyMoral">
                     </tbody>
                 </table>
             </div>
@@ -133,9 +153,11 @@
                 <span>Your Average Grade : </span><span id="gpaSpan"></span>
             </div>
             <button id="printButton"
-                class="border p-[6px] md:p-2 text-zinc-800 rounded-lg bg-slate-50 transition-all duration-300 text-base md:text-lg font-bold border-gray-300 hover:bg-gray-100 hover:shadow hover:text-lime-600">Save <i class="fa-solid fa-download"></i></button>
+                class="border p-[6px] md:p-2 text-zinc-800 rounded-lg bg-slate-50 transition-all duration-300 text-base md:text-lg font-bold border-gray-300 hover:bg-gray-100 hover:shadow hover:text-lime-600">Save
+                <i class="fa-solid fa-download"></i></button>
         </div>
-        <span id="xButton" class="absolute top-1 right-3 text-red-700 font-bold cursor-pointer"><i class="fa-solid fa-xmark"></i></span>
+        <span id="xButton" class="absolute top-1 right-3 text-red-700 font-bold cursor-pointer"><i
+                class="fa-solid fa-xmark"></i></span>
     </div>
     <script src="index/app/script.js"></script>
 </body>
