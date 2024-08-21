@@ -54,7 +54,7 @@ calculateButton.addEventListener("click", () => {
         name = element.children[0].firstChild.value
         credit = Number(element.children[1].firstChild.value)
         grade = Number(element.children[2].firstChild.value)
-        if ((name != "") && (credit <= 4) && (credit > 0) && (grade <= 20) && (grade >= 0)) {
+        if ((name != "") && (credit <= 4) && (credit > 0) && (grade <= 20) && (grade > 0)) {
             flag=true
             dataObj = {
                 id: ++id,
@@ -69,7 +69,7 @@ calculateButton.addEventListener("click", () => {
                 alert(`You did not write the name of the line ${element.id}'s course`)
             } else if (!((credit <= 4) && (credit > 0))) {
                 alert(`The number of credits in the line ${element.id}'s course must be between 1 and 4`)
-            } else if (!((grade <= 20) && (grade >= 0))) {
+            } else if (!((grade <= 20) && (grade > 0))) {
                 alert(`The grade of the line ${element.id}'s course must be between 0 and 20`)
             }
         }
