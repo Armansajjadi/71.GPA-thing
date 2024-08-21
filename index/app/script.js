@@ -106,12 +106,12 @@ let calculateGPA = (Datas) => {
 }
 
 function doTheTable(course,gpaGrade){
-    tbodyMoral.insertAdjacentHTML("beforeend",`                         <tr class="border-b border-gray-300">
+    tbodyMoral.insertAdjacentHTML("beforeend",`<tr class="border-b border-gray-300">
                             <td class="p-2 md:p-5"><p class="text-center text-zinc-600 font-semibold">${course.id}</p></td>
                             <td class="p-2 md:p-5"><p class="text-center text-zinc-600 font-semibold">${course.name}</p></td>
                             <td class="p-2 md:p-5"><p class="text-center text-zinc-600 font-semibold">${gpaGrade}</p></td>
                             <td class="p-2 md:p-5"><p class="text-center text-zinc-600 font-semibold">${course.credit}</p></td>
-                        </tr>  `)
+                        </tr>`)
 }
 
 
